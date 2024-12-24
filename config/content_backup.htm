@@ -99,12 +99,19 @@ openByGet();
 <p><img alt="" height="216" src="/images/螢幕擷取畫面 2024-11-28 010037.png" width="411"/></p>
 <h2>w6</h2>
 <p>part1</p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="300" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/KBvYEbsvhZY?si=w0hTBHlqu_uT52oP" title="YouTube video player" width="400"></iframe></p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="300" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/KBvYEbsvhZY?si=w0hTBHlqu_uT52oP" title="YouTube video player" width="450"></iframe></p>
 <p>part2</p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="300" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/ZFkPggW08P8?si=wDH6b6R1VHRAQY-Y" title="YouTube video player" width="400"></iframe></p>
-<p></p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="300" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/ZFkPggW08P8?si=wDH6b6R1VHRAQY-Y" title="YouTube video player" width="450"></iframe></p>
+<p><span>part3</span></p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="300" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/-N4ZX0LniNQ?si=XCa3qz1PG0jPUaQn" title="YouTube video player" width="450"></iframe></p>
+<p><span>part4</span></p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="300" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/ZW7UL3v3KIk?si=ksxfiwWebJTKxglL" title="YouTube video player" width="450"></iframe></p>
+<p><span>part5</span></p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="300" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/yk3Ls57ZXNY?si=ndoGOq5V1IH0P4TU" title="YouTube video player" width="450"></iframe></p>
+<p><span>part6</span></p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="300" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/Yh_s69JBmnM?si=1n0evJT9LKi0_Gj7" title="YouTube video player" width="450"></iframe></p>
 <script src="/static/jsc3d.js" type="text/javascript"></script>
-<div id="models"><canvas height="250" id="cv1" style="border: 1px solid;" width="250"></canvas> <canvas height="250" id="cv2" style="border: 1px solid;" width="250"></canvas> <!-- 可以添加更多的 canvas --></div>
+<div id="models"><canvas height="250" id="cv1" style="border: 1px solid;" width="250"></canvas> <canvas height="250" id="cv2" style="border: 1px solid;" width="250"></canvas> <canvas height="250" id="cv3" style="border: 1px solid;" width="250"></canvas> <canvas height="250" id="cv4" style="border: 1px solid;" width="250"></canvas> <canvas height="250" id="cv5" style="border: 1px solid;" width="250"></canvas> <canvas height="250" id="cv6" style="border: 1px solid;" width="250"></canvas></div>
 <div style="width: 500px; height: 90px; border: 1px solid;">Model Color:<input id="mdlClr" onchange="changeOption('ModelColor',this.value)" style="margin-right: 50px;" type="color" value="#00ff40"/> Back Color1:<input id="bckClr1" onchange="changeOption('BackgroundColor1',this.value)" style="margin-right: 50px;" type="color"/> Back Color2:<input id="bckClr2" onchange="changeOption('BackgroundColor2',this.value)" type="color"/><br/> Render Mode:<select id="render" onchange="changeOption('RenderMode',this.value)">
 <option>Flat</option>
 <option>Point</option>
@@ -153,19 +160,14 @@ function changeOption(strOpt,strValue){
     });
 }
 
-function openByUrl(){
-    var url = document.getElementById("url").value;
-    var opt = getOptions();
-    opt.SceneUrl = url;
-    // 可以添加更多的 STL URL
-    readSTLfile(opt, 'cv1'); // 為每個 canvas 調用
-    readSTLfile(opt, 'cv2'); // 第二個 canvas
-}
-
 function openByGet(){
     var urls = [
         "https://s104.cycu.org/~41223147/41223147_part1.stl",
-        "https://s104.cycu.org/~41223147/41223147_part2.stl"
+        "https://s104.cycu.org/~41223147/41223147_part2.stl",
+        "https://s104.cycu.org/~41223147/41223147_part3.stl",
+        "https://s104.cycu.org/~41223147/41223147_part4.stl",
+        "https://s104.cycu.org/~41223147/41223147_part5.stl",,
+        "https://s104.cycu.org/~41223147/41223147_part06.stl",
     ];
     var opt = getOptions();
     urls.forEach((url, index) => {
@@ -175,16 +177,7 @@ function openByGet(){
 }
 
 openByGet();
-</script>
-<h2>w7</h2>
-<p>part3</p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="300" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/-N4ZX0LniNQ?si=WHHxSaw-qIwz_Z2o" title="YouTube video player" width="450"></iframe></p>
-<p>part4</p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="300" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/ZW7UL3v3KIk?si=Nzk3bTYQx0KfFaHV" title="YouTube video player" width="450"></iframe></p>
-<p>part5</p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="300" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/yk3Ls57ZXNY?si=QA43FLRxG0S-s6xm" title="YouTube video player" width="450"></iframe></p>
-<p>part6</p>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="300" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/Yh_s69JBmnM?si=Xj3nr_nvFrYQQDFV" title="YouTube video player" width="450"></iframe></p>
+</script><h2>w7</h2>
 <p>part7</p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="300" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/5kw49a5aexQ?si=7PEnggHTYLdeB6X7" title="YouTube video player" width="450"></iframe></p>
 <p>part8</p>
@@ -193,8 +186,14 @@ openByGet();
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="300" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/ro67x8oTEx8?si=0nXH8QVgyfMreXaq" title="YouTube video player" width="450"></iframe></p>
 <p>part10</p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="300" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/ptaC7Ocue1c?si=cV2-UMMixiCRBzOS" title="YouTube video player" width="450"></iframe></p>
+<p><span>part11</span></p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="300" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/rDun28k0kl8?si=hII4K2U19kikakaS" title="YouTube video player" width="450"></iframe></p>
+<p><span>part12</span></p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="300" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/s3DqJ7OtMXw?si=5eB1Po9tJ5PjJys4" title="YouTube video player" width="450"></iframe></p>
+<p><span>part13</span></p>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="300" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/UBuEqNH1gcc?si=RBv9sRfOS9Nt-X1k" title="YouTube video player" width="450"></iframe></p>
 <script src="/static/jsc3d.js" type="text/javascript"></script>
-<div id="models"><canvas height="250" id="cv1" style="border: 1px solid;" width="250"></canvas> <canvas height="250" id="cv2" style="border: 1px solid;" width="250"></canvas> <canvas height="250" id="cv3" style="border: 1px solid;" width="250"></canvas> <canvas height="250" id="cv4" style="border: 1px solid;" width="250"></canvas> <canvas height="250" id="cv5" style="border: 1px solid;" width="250"></canvas> <canvas height="250" id="cv6" style="border: 1px solid;" width="250"></canvas> <canvas height="250" id="cv7" style="border: 1px solid;" width="250"></canvas> <canvas height="250" id="cv8" style="border: 1px solid;" width="250"></canvas></div>
+<div id="models"><canvas height="250" id="cv1" style="border: 1px solid;" width="250"></canvas> <canvas height="250" id="cv2" style="border: 1px solid;" width="250"></canvas> <canvas height="250" id="cv3" style="border: 1px solid;" width="250"></canvas> <canvas height="250" id="cv4" style="border: 1px solid;" width="250"></canvas> <canvas height="250" id="cv5" style="border: 1px solid;" width="250"></canvas> <canvas height="250" id="cv6" style="border: 1px solid;" width="250"></canvas> <canvas height="250" id="cv7" style="border: 1px solid;" width="250"></canvas></div>
 <div style="width: 500px; height: 90px; border: 1px solid;">Model Color:<input id="mdlClr" onchange="changeOption('ModelColor',this.value)" style="margin-right: 50px;" type="color" value="#00ff40"/> Back Color1:<input id="bckClr1" onchange="changeOption('BackgroundColor1',this.value)" style="margin-right: 50px;" type="color"/> Back Color2:<input id="bckClr2" onchange="changeOption('BackgroundColor2',this.value)" type="color"/><br/> Render Mode:<select id="render" onchange="changeOption('RenderMode',this.value)">
 <option>Flat</option>
 <option>Point</option>
@@ -245,14 +244,13 @@ function changeOption(strOpt,strValue){
 
 function openByGet(){
     var urls = [
-        "https://s104.cycu.org/~41223147/41223147_part3.stl",
-        "https://s104.cycu.org/~41223147/41223147_part4.stl",
-        "https://s104.cycu.org/~41223147/41223147_part5.stl",
-        "https://s104.cycu.org/~41223147/41223147_part6.stl",
         "https://s104.cycu.org/~41223147/41223147_part7.stl",
         "https://s104.cycu.org/~41223147/41223147_part08.stl",
         "https://s104.cycu.org/~41223147/41223147_part9.stl",
         "https://s104.cycu.org/~41223147/41223147_part10.stl",
+        "https://s104.cycu.org/~41223147/41223147_part11.stl",
+        "https://s104.cycu.org/~41223147/41223147_part12.stl",
+        "https://s104.cycu.org/~41223147/41223147_part13.stl",
     ];
     var opt = getOptions();
     urls.forEach((url, index) => {
@@ -349,6 +347,8 @@ openByGet();
 <p><a href="/downloads/Piece métalique gauche_sldprt.7z">Piece métalique gauche_sldprt.7z</a> <a href="/downloads/Support Bobine_sldprt.7z">Support Bobine_sldprt.7z</a></p>
 <p>另外5個零件由<a href="https://mdecad2024.github.io/hw-41223138/content/w11_hw.html">41223138</a>和<a href="https://mdecad2024.github.io/hw-41223140/content/w11_hw.html">41223140</a>繪製</p>
 <h2>w12_ch</h2>
+<p>1.抽查w7、w10、w11_hw 頁面內容</p>
+<p>2.介紹solvespace功能及組合零件的技巧</p>
 <p>零件組合過程:</p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="300" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/19VWsJT4mvE?si=kwsWO83eI0d95ufn" title="YouTube video player" width="500"></iframe></p>
 <p>組合件stl檔:</p>
@@ -445,8 +445,7 @@ var viewer3d;
     }
     openByGet();
 </script>
-<p><a href="https://mdecad2024.github.io/hw-41223147/cmsimde/static/viewstl.html?src=https://s104.cycu.org/~41223147/41223147_partAssemble-2.stl">組合件</a></p>
-<h2>w13</h2>
+<p><a href="https://mdecad2024.github.io/hw-41223147/cmsimde/static/viewstl.html?src=https://s104.cycu.org/~41223147/41223147_partAssemble-2.stl">組合件</a></p><h2>w13</h2>
 <p>CoppeliaSim模擬轉動過程:</p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="300" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/BGZO4OCPwbk?si=DPK4idGp9XWbUnm5" title="YouTube video player" width="500"></iframe></p>
 <p><a href="/downloads/w11_hw CoppelaiSim Sence Assemble模擬轉動.ttt">CoppeliaSim檔案</a></p>
@@ -549,7 +548,8 @@ var viewer3d;
     }
     openByGet();
 </script>
-</p><h1>HW1</h1>
+</p>
+<p><a href="https://mdecad2024.github.io/hw-41223147/cmsimde/static/viewstl.html?src=https://s104.cycu.org/~41223147/41223147_part-flipper-assembly.stl">flipper組合件</a></p><h1>HW1</h1>
 <p>Homework 1 (10%):</p>
 <p style="padding-left: 30px;">利用 Solvespace 與 NX2312 建立 <a href="https://mde.tw/cad2024/content/Parts.html">Parts</a> 頁面中的零件</p>
 <p style="padding-left: 30px;">其他<a href="http://229.cycu.org/part_modeling_projects.pdf">零件模擬練習</a></p>
@@ -708,8 +708,7 @@ function openByGet(){
 }
 
 openByGet();
-</script>
-<h2>HW1_Exam</h2>
+</script><h2>HW1_Exam</h2>
 <p>從<a href="http://229.cycu.org/part_modeling_projects.pdf">零件模擬練習</a>中選出零件, 隨堂進行考試.</p>
 <p>零件考試題目以 Solvespace 繪圖操作過程影片如下:</p>
 <p style="padding-left: 30px;">請將操作影片嵌入 ......</p>
